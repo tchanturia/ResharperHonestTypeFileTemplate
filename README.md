@@ -18,8 +18,5 @@ Once you've imported templates you can then create a new item from the template:
 
 ![](https://github.com/tchanturia/ResharperHonestTypeFileTemplate/blob/master/markup/sourcetype1.png)
 
-4. Press `Enter` key and you'll be moved to `SOURCETYPE2` template variable. Edit that one if needed (i.e. the honest type's source type is `long` as well as `ulong`) or just :fire: it.
-
-![](https://github.com/tchanturia/ResharperHonestTypeFileTemplate/blob/master/markup/sourcetype2.png)
-
+4. Press `Enter` key after you finished with `SOURCETYPE1`
 5. You now have your very awesome honest type!

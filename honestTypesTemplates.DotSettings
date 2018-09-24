@@ -10,7 +10,6 @@ namespace $NAMESPACE$&#xD;
         private readonly $SOURCETYPE1$ _value;&#xD;
 &#xD;
         public static implicit operator $SOURCETYPE1$($CLASS$ id) =&gt; id._value;&#xD;
-        public static implicit operator $SOURCETYPE2$($CLASS$ id) =&gt; ($SOURCETYPE2$) id._value;&#xD;
         public static explicit operator $CLASS$($SOURCETYPE1$ id) =&gt; new $CLASS$(id);&#xD;
 &#xD;
         private $CLASS$(ulong value)&#xD;
@@ -50,6 +49,7 @@ namespace $NAMESPACE$&#xD;
 }</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6748F06FA1F39F4B98FC30E3093A6465/Reformat/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6748F06FA1F39F4B98FC30E3093A6465/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6748F06FA1F39F4B98FC30E3093A6465/Categories/=Imported_002024_002D9_002D2018/@EntryIndexedValue">Imported 24-9-2018</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6748F06FA1F39F4B98FC30E3093A6465/CustomProperties/=Extension/@EntryIndexedValue">cs</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6748F06FA1F39F4B98FC30E3093A6465/CustomProperties/=FileName/@EntryIndexedValue">HonestType</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6748F06FA1F39F4B98FC30E3093A6465/CustomProperties/=ValidateFileName/@EntryIndexedValue">True</s:String>
@@ -66,8 +66,6 @@ namespace $NAMESPACE$&#xD;
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6748F06FA1F39F4B98FC30E3093A6465/Field/=NAMESPACE/Order/@EntryValue">1</s:Int64>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6748F06FA1F39F4B98FC30E3093A6465/Field/=SOURCETYPE1/@KeyIndexDefined">True</s:Boolean>
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6748F06FA1F39F4B98FC30E3093A6465/Field/=SOURCETYPE1/Order/@EntryValue">2</s:Int64>
-	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6748F06FA1F39F4B98FC30E3093A6465/Field/=SOURCETYPE2/@KeyIndexDefined">True</s:Boolean>
-	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6748F06FA1F39F4B98FC30E3093A6465/Field/=SOURCETYPE2/Order/@EntryValue">3</s:Int64>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Description/@EntryValue">Honest Type Tests</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Text/@EntryValue">using System;&#xD;
@@ -210,6 +208,7 @@ namespace $NAMESPACE$&#xD;
 </s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Reformat/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Categories/=Imported_002024_002D9_002D2018/@EntryIndexedValue">Imported 24-9-2018</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/CustomProperties/=FileName/@EntryIndexedValue">HonestTypeTests</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/CustomProperties/=Extension/@EntryIndexedValue">cs</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/CustomProperties/=ValidateFileName/@EntryIndexedValue">True</s:String>

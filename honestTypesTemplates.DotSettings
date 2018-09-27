@@ -1,4 +1,171 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Description/@EntryValue">Honest Type Tests</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Text/@EntryValue">using System;&#xD;
+&#xD;
+using FluentAssertions;&#xD;
+&#xD;
+using Xunit;&#xD;
+&#xD;
+namespace $NAMESPACE$&#xD;
+{&#xD;
+    public class $CLASS$&#xD;
+    {&#xD;
+        [Fact]&#xD;
+        public void Equals_WithTwoEqual$HonestType$Objects_ReturnsTrue()&#xD;
+        {&#xD;
+            var $lowercase_honestType$1 = ($HonestType$)1;&#xD;
+            var $lowercase_honestType$2 = ($HonestType$)1;&#xD;
+&#xD;
+            $lowercase_honestType$1.Equals($lowercase_honestType$2)&#xD;
+                      .Should().BeTrue();&#xD;
+        }&#xD;
+&#xD;
+        [Fact]&#xD;
+        public void Equals_WithTwoUnequal$HonestType$Objects_ReturnsFalse()&#xD;
+        {&#xD;
+            var $lowercase_honestType$1 = ($HonestType$)1;&#xD;
+            var $lowercase_honestType$2 = ($HonestType$)2;&#xD;
+&#xD;
+            $lowercase_honestType$1.Equals($lowercase_honestType$2)&#xD;
+                      .Should().BeFalse();&#xD;
+        }&#xD;
+&#xD;
+        [Fact]&#xD;
+        public void Equals_WithEqual$HonestType$WrappedAsObject_ReturnsTrue()&#xD;
+        {&#xD;
+            var $lowercase_honestType$1 = ($HonestType$)1;&#xD;
+            var $lowercase_honestType$2 = ($HonestType$)1;&#xD;
+&#xD;
+            $lowercase_honestType$1 .Equals((object)$lowercase_honestType$2)&#xD;
+                      .Should().BeTrue();&#xD;
+        }&#xD;
+&#xD;
+        [Fact]&#xD;
+        public void Equals_WithUnequal$HonestType$WrappedAsObject_ReturnsTrue()&#xD;
+        {&#xD;
+            var $lowercase_honestType$1  = ($HonestType$)1;&#xD;
+            var $lowercase_honestType$2 = ($HonestType$)2;&#xD;
+&#xD;
+            $lowercase_honestType$1 .Equals((object)$lowercase_honestType$2)&#xD;
+                      .Should().BeFalse();&#xD;
+        }&#xD;
+&#xD;
+        [Fact]&#xD;
+        public void Equals_WithAnObject_ReturnsFalse()&#xD;
+        {&#xD;
+            var productId = ($HonestType$)1;&#xD;
+&#xD;
+            productId.Equals(new object())&#xD;
+                     .Should().BeFalse();&#xD;
+        }&#xD;
+&#xD;
+        [Fact]&#xD;
+        public void EqualityOperator_WithEqual$HonestType$Objects_ReturnsTrue()&#xD;
+        {&#xD;
+            var $lowercase_honestType$1  = ($HonestType$)1;&#xD;
+            var $lowercase_honestType$2 = ($HonestType$)1;&#xD;
+&#xD;
+            ($lowercase_honestType$1  == $lowercase_honestType$2).Should().BeTrue();&#xD;
+        }&#xD;
+&#xD;
+        [Fact]&#xD;
+        public void EqualityOperator_WithUnequal$HonestType$Objects_ReturnsFalse()&#xD;
+        {&#xD;
+            var $lowercase_honestType$1  = ($HonestType$)1;&#xD;
+            var $lowercase_honestType$2 = ($HonestType$)2;&#xD;
+&#xD;
+            ($lowercase_honestType$1  == $lowercase_honestType$2).Should().BeFalse();&#xD;
+        }&#xD;
+&#xD;
+        [Fact]&#xD;
+        public void NonEqualityOperator_WithEqual$HonestType$Objects_ReturnsFalse()&#xD;
+        {&#xD;
+            var $lowercase_honestType$1  = ($HonestType$)1;&#xD;
+            var $lowercase_honestType$2 = ($HonestType$)1;&#xD;
+&#xD;
+            ($lowercase_honestType$1  != $lowercase_honestType$2).Should().BeFalse();&#xD;
+        }&#xD;
+&#xD;
+        [Fact]&#xD;
+        public void NonEqualityOperator_WithUnequal$HonestType$Objects_ReturnsTrue()&#xD;
+        {&#xD;
+            var $lowercase_honestType$1  = ($HonestType$)1;&#xD;
+            var $lowercase_honestType$2 = ($HonestType$)2;&#xD;
+&#xD;
+            ($lowercase_honestType$1  != $lowercase_honestType$2).Should().BeTrue();&#xD;
+        }&#xD;
+&#xD;
+        [Fact]&#xD;
+        public void ToString_ReturnsValueAsString()&#xD;
+        {&#xD;
+            var stockLockQuantity = ($HonestType$)1;&#xD;
+&#xD;
+            stockLockQuantity.ToString().Should().BeOfType&lt;string&gt;()&#xD;
+                             .Which.Should().Be("1");&#xD;
+        }&#xD;
+&#xD;
+        [Fact]&#xD;
+        public void GetHashCode_WithTwoEqual$HonestType$Objects_ReturnsSameHashCode()&#xD;
+        {&#xD;
+            var $lowercase_honestType$1  = ($HonestType$)1;&#xD;
+            var $lowercase_honestType$2 = ($HonestType$)1;&#xD;
+&#xD;
+            $lowercase_honestType$1 .GetHashCode()&#xD;
+                      .Should().Be($lowercase_honestType$2.GetHashCode());&#xD;
+        }&#xD;
+&#xD;
+        [Fact]&#xD;
+        public void GetHashCode_WithTwoUnequal$HonestType$Objects_ReturnsDifferentHashCodes()&#xD;
+        {&#xD;
+            var $lowercase_honestType$1  = ($HonestType$)1;&#xD;
+            var $lowercase_honestType$2 = ($HonestType$)2;&#xD;
+&#xD;
+            $lowercase_honestType$1 .GetHashCode()&#xD;
+                      .Should().NotBe($lowercase_honestType$2.GetHashCode());&#xD;
+        }&#xD;
+&#xD;
+        [Fact]&#xD;
+        public void ImplicitAssignment_$HonestType$CanBeAssignedTo$SourceType$()&#xD;
+        {&#xD;
+            $HonestType$ productId = ($HonestType$)2;&#xD;
+            $SourceType$ $lowercase_SourceType$$HonestType$ = 0;&#xD;
+&#xD;
+            Action implicitAssignmentAction = () =&gt; { $lowercase_SourceType$$HonestType$ = productId; };&#xD;
+&#xD;
+            implicitAssignmentAction.Should().NotThrow&lt;Exception&gt;();&#xD;
+            $lowercase_SourceType$$HonestType$.Should().Be(2);&#xD;
+        }&#xD;
+    }&#xD;
+}&#xD;
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Categories/=Imported_002024_002D9_002D2018/@EntryIndexedValue">Imported 24-9-2018</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/CustomProperties/=Extension/@EntryIndexedValue">cs</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/CustomProperties/=FileName/@EntryIndexedValue">HonestTypeTests</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/CustomProperties/=ValidateFileName/@EntryIndexedValue">True</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Scope/=E8F0594528C33E45BBFEC6CFE851095D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Scope/=E8F0594528C33E45BBFEC6CFE851095D/Type/@EntryValue">InCSharpProjectFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=CLASS/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=CLASS/Expression/@EntryValue">getAlphaNumericFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=CLASS/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=CLASS/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=NAMESPACE/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=NAMESPACE/Expression/@EntryValue">fileDefaultNamespace()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=NAMESPACE/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=NAMESPACE/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=HonestType/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=HonestType/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=lowercase_005FhonestType/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=lowercase_005FhonestType/Expression/@EntryValue">decapitalize(HonestType)</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=lowercase_005FhonestType/Order/@EntryValue">3</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=SourceType/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=SourceType/Order/@EntryValue">4</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=lowercase_005FSourceType/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=lowercase_005FSourceType/Expression/@EntryValue">decapitalize(SourceType)</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=lowercase_005FSourceType/Order/@EntryValue">5</s:Int64>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6748F06FA1F39F4B98FC30E3093A6465/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6748F06FA1F39F4B98FC30E3093A6465/Description/@EntryValue">HonestType</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6748F06FA1F39F4B98FC30E3093A6465/Text/@EntryValue">using System;&#xD;
@@ -12,7 +179,7 @@ namespace $NAMESPACE$&#xD;
         public static implicit operator $SOURCETYPE1$($CLASS$ id) =&gt; id._value;&#xD;
         public static explicit operator $CLASS$($SOURCETYPE1$ id) =&gt; new $CLASS$(id);&#xD;
 &#xD;
-        private $CLASS$(ulong value)&#xD;
+        private $CLASS$($SOURCETYPE1$ value)&#xD;
         {&#xD;
             _value = value;&#xD;
         }&#xD;
@@ -65,168 +232,4 @@ namespace $NAMESPACE$&#xD;
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6748F06FA1F39F4B98FC30E3093A6465/Field/=NAMESPACE/InitialRange/@EntryValue">-1</s:Int64>
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6748F06FA1F39F4B98FC30E3093A6465/Field/=NAMESPACE/Order/@EntryValue">1</s:Int64>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6748F06FA1F39F4B98FC30E3093A6465/Field/=SOURCETYPE1/@KeyIndexDefined">True</s:Boolean>
-	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6748F06FA1F39F4B98FC30E3093A6465/Field/=SOURCETYPE1/Order/@EntryValue">2</s:Int64>
-	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/@KeyIndexDefined">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Description/@EntryValue">Honest Type Tests</s:String>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Text/@EntryValue">using System;&#xD;
-&#xD;
-using FluentAssertions;&#xD;
-&#xD;
-using Xunit;&#xD;
-&#xD;
-namespace $NAMESPACE$&#xD;
-{&#xD;
-    public class $CLASS$&#xD;
-    {&#xD;
-        [Fact]&#xD;
-        public void Equals_WithTwoEqual$HonestType$s_ReturnsTrue()&#xD;
-        {&#xD;
-            var $lowercase_honestType$1 = ($HonestType$)1;&#xD;
-            var $lowercase_honestType$2 = ($HonestType$)1;&#xD;
-&#xD;
-            $lowercase_honestType$1.Equals($lowercase_honestType$2)&#xD;
-                      .Should().BeTrue();&#xD;
-        }&#xD;
-&#xD;
-        [Fact]&#xD;
-        public void Equals_WithTwoUnEqual$HonestType$s_ReturnsFalse()&#xD;
-        {&#xD;
-            var $lowercase_honestType$1 = ($HonestType$)1;&#xD;
-            var $lowercase_honestType$2 = ($HonestType$)2;&#xD;
-&#xD;
-            $lowercase_honestType$1.Equals($lowercase_honestType$2)&#xD;
-                      .Should().BeFalse();&#xD;
-        }&#xD;
-&#xD;
-        [Fact]&#xD;
-        public void Equals_WithEqual$HonestType$WrappedAsObject_ReturnsTrue()&#xD;
-        {&#xD;
-            var $lowercase_honestType$1 = ($HonestType$)1;&#xD;
-            var $lowercase_honestType$2 = ($HonestType$)1;&#xD;
-&#xD;
-            $lowercase_honestType$1 .Equals((object)$lowercase_honestType$2)&#xD;
-                      .Should().BeTrue();&#xD;
-        }&#xD;
-&#xD;
-        [Fact]&#xD;
-        public void Equals_WithUnEqual$HonestType$WrappedAsObject_ReturnsTrue()&#xD;
-        {&#xD;
-            var $lowercase_honestType$1  = ($HonestType$)1;&#xD;
-            var $lowercase_honestType$2 = ($HonestType$)2;&#xD;
-&#xD;
-            $lowercase_honestType$1 .Equals((object)$lowercase_honestType$2)&#xD;
-                      .Should().BeFalse();&#xD;
-        }&#xD;
-&#xD;
-        [Fact]&#xD;
-        public void Equals_WithAnObject_ReturnsFalse()&#xD;
-        {&#xD;
-            var productId = ($HonestType$)1;&#xD;
-&#xD;
-            productId.Equals(new object())&#xD;
-                     .Should().BeFalse();&#xD;
-        }&#xD;
-&#xD;
-        [Fact]&#xD;
-        public void EqualityOperator_WithEqual$HonestType$s_ReturnsTrue()&#xD;
-        {&#xD;
-            var $lowercase_honestType$1  = ($HonestType$)1;&#xD;
-            var $lowercase_honestType$2 = ($HonestType$)1;&#xD;
-&#xD;
-            ($lowercase_honestType$1  == $lowercase_honestType$2).Should().BeTrue();&#xD;
-        }&#xD;
-&#xD;
-        [Fact]&#xD;
-        public void EqualityOperator_WithUnEqual$HonestType$s_ReturnsFalse()&#xD;
-        {&#xD;
-            var $lowercase_honestType$1  = ($HonestType$)1;&#xD;
-            var $lowercase_honestType$2 = ($HonestType$)2;&#xD;
-&#xD;
-            ($lowercase_honestType$1  == $lowercase_honestType$2).Should().BeFalse();&#xD;
-        }&#xD;
-&#xD;
-        [Fact]&#xD;
-        public void NonEqualityOperator_WithEqual$HonestType$s_ReturnsFalse()&#xD;
-        {&#xD;
-            var $lowercase_honestType$1  = ($HonestType$)1;&#xD;
-            var $lowercase_honestType$2 = ($HonestType$)1;&#xD;
-&#xD;
-            ($lowercase_honestType$1  != $lowercase_honestType$2).Should().BeFalse();&#xD;
-        }&#xD;
-&#xD;
-        [Fact]&#xD;
-        public void NonEqualityOperator_WithUnEqual$HonestType$s_ReturnsTrue()&#xD;
-        {&#xD;
-            var $lowercase_honestType$1  = ($HonestType$)1;&#xD;
-            var $lowercase_honestType$2 = ($HonestType$)2;&#xD;
-&#xD;
-            ($lowercase_honestType$1  != $lowercase_honestType$2).Should().BeTrue();&#xD;
-        }&#xD;
-&#xD;
-        [Fact]&#xD;
-        public void ToString_ReturnsValueAsString()&#xD;
-        {&#xD;
-            var stockLockQuantity = ($HonestType$)1;&#xD;
-&#xD;
-            stockLockQuantity.ToString().Should().BeOfType&lt;string&gt;()&#xD;
-                             .Which.Should().Be("1");&#xD;
-        }&#xD;
-&#xD;
-        [Fact]&#xD;
-        public void GetHashCode_WithTwoEqual$HonestType$s_ReturnsSameHashCode()&#xD;
-        {&#xD;
-            var $lowercase_honestType$1  = ($HonestType$)1;&#xD;
-            var $lowercase_honestType$2 = ($HonestType$)1;&#xD;
-&#xD;
-            $lowercase_honestType$1 .GetHashCode()&#xD;
-                      .Should().Be($lowercase_honestType$2.GetHashCode());&#xD;
-        }&#xD;
-&#xD;
-        [Fact]&#xD;
-        public void GetHashCode_WithTwoUnEqual$HonestType$s_ReturnsDifferentHashCodes()&#xD;
-        {&#xD;
-            var $lowercase_honestType$1  = ($HonestType$)1;&#xD;
-            var $lowercase_honestType$2 = ($HonestType$)2;&#xD;
-&#xD;
-            $lowercase_honestType$1 .GetHashCode()&#xD;
-                      .Should().NotBe($lowercase_honestType$2.GetHashCode());&#xD;
-        }&#xD;
-&#xD;
-        [Fact]&#xD;
-        public void ImplicitAssignment_$HonestType$CanBeAssignedTo$SourceType$()&#xD;
-        {&#xD;
-            $HonestType$ productId = ($HonestType$)2;&#xD;
-            $SourceType$ $SourceType$$HonestType$ = 0;&#xD;
-&#xD;
-            Action implicitAssignmentAction = () =&gt; { $SourceType$$HonestType$ = productId; };&#xD;
-&#xD;
-            implicitAssignmentAction.Should().NotThrow&lt;Exception&gt;();&#xD;
-            $SourceType$$HonestType$.Should().Be(2);&#xD;
-        }&#xD;
-    }&#xD;
-}&#xD;
-</s:String>
-	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Reformat/@EntryValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Categories/=Imported_002024_002D9_002D2018/@EntryIndexedValue">Imported 24-9-2018</s:String>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/CustomProperties/=FileName/@EntryIndexedValue">HonestTypeTests</s:String>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/CustomProperties/=Extension/@EntryIndexedValue">cs</s:String>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/CustomProperties/=ValidateFileName/@EntryIndexedValue">True</s:String>
-	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Scope/=E8F0594528C33E45BBFEC6CFE851095D/@KeyIndexDefined">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Scope/=E8F0594528C33E45BBFEC6CFE851095D/Type/@EntryValue">InCSharpProjectFile</s:String>
-	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=CLASS/@KeyIndexDefined">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=CLASS/Expression/@EntryValue">getAlphaNumericFileNameWithoutExtension()</s:String>
-	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=CLASS/InitialRange/@EntryValue">-1</s:Int64>
-	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=CLASS/Order/@EntryValue">0</s:Int64>
-	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=NAMESPACE/@KeyIndexDefined">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=NAMESPACE/Expression/@EntryValue">fileDefaultNamespace()</s:String>
-	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=NAMESPACE/InitialRange/@EntryValue">-1</s:Int64>
-	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=NAMESPACE/Order/@EntryValue">1</s:Int64>
-	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=HonestType/@KeyIndexDefined">True</s:Boolean>
-	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=HonestType/Order/@EntryValue">2</s:Int64>
-	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=lowercase_005FhonestType/@KeyIndexDefined">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=lowercase_005FhonestType/Expression/@EntryValue">decapitalize(HonestType)</s:String>
-	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=lowercase_005FhonestType/Order/@EntryValue">3</s:Int64>
-	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=SourceType/@KeyIndexDefined">True</s:Boolean>
-	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Field/=SourceType/Order/@EntryValue">4</s:Int64></wpf:ResourceDictionary>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6748F06FA1F39F4B98FC30E3093A6465/Field/=SOURCETYPE1/Order/@EntryValue">2</s:Int64></wpf:ResourceDictionary>

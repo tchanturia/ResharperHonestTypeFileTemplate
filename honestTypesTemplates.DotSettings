@@ -1,4 +1,4 @@
-﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Description/@EntryValue">Honest Type Tests</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=240318DCB90D0B469DEF54C46A2D9803/Text/@EntryValue">using System;&#xD;
@@ -54,9 +54,9 @@ namespace $NAMESPACE$&#xD;
         [Fact]&#xD;
         public void Equals_WithAnObject_ReturnsFalse()&#xD;
         {&#xD;
-            var productId = ($HonestType$)1;&#xD;
+            var $lowercase_honestType$ = ($HonestType$)1;&#xD;
 &#xD;
-            productId.Equals(new object())&#xD;
+            $lowercase_honestType$.Equals(new object())&#xD;
                      .Should().BeFalse();&#xD;
         }&#xD;
 &#xD;
@@ -99,9 +99,9 @@ namespace $NAMESPACE$&#xD;
         [Fact]&#xD;
         public void ToString_ReturnsValueAsString()&#xD;
         {&#xD;
-            var stockLockQuantity = ($HonestType$)1;&#xD;
+            var $lowercase_honestType$ = ($HonestType$)1;&#xD;
 &#xD;
-            stockLockQuantity.ToString().Should().BeOfType&lt;string&gt;()&#xD;
+            $lowercase_honestType$.ToString().Should().BeOfType&lt;string&gt;()&#xD;
                              .Which.Should().Be("1");&#xD;
         }&#xD;
 &#xD;
@@ -128,10 +128,10 @@ namespace $NAMESPACE$&#xD;
         [Fact]&#xD;
         public void ImplicitAssignment_$HonestType$CanBeAssignedTo$SourceType$()&#xD;
         {&#xD;
-            $HonestType$ productId = ($HonestType$)2;&#xD;
+            var $lowercase_honestType$ = ($HonestType$)2;&#xD;
             $SourceType$ $lowercase_SourceType$$HonestType$ = 0;&#xD;
 &#xD;
-            Action implicitAssignmentAction = () =&gt; { $lowercase_SourceType$$HonestType$ = productId; };&#xD;
+            Action implicitAssignmentAction = () =&gt; { $lowercase_SourceType$$HonestType$ = $lowercase_honestType$; };&#xD;
 &#xD;
             implicitAssignmentAction.Should().NotThrow&lt;Exception&gt;();&#xD;
             $lowercase_SourceType$$HonestType$.Should().Be(2);&#xD;
